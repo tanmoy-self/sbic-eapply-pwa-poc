@@ -1,0 +1,58 @@
+.app-shell-menu {
+  background-color: #fff !important;
+  height: 40px;
+  width: 100%;
+}
+
+.black-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  z-index: 50;
+  height: 30px;
+  background: black;
+  width: 100%;
+
+}
+
+.blue-nav {
+  position: fixed;
+  z-index: 50;
+  top: 70px;
+  left: 0;
+  height: 15px;
+  background: #565681;
+  width: 100%;
+}
+
+.ui.fixed.menu {
+  top: 30px !important;
+  padding-left: 12.5%;
+}
+
+.ui.menu .item>img:not(.ui) {
+  width: 7.5em;
+}
+
+.ui.inverted.menu .header.item {
+  margin: 0;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  background: 0 0;
+  color: #000;
+  box-shadow: none;
+}
+
+.apply-btn {
+  color: #fff !important;
+  /* height: 100%; */
+  padding: 10px;
+  margin-top: 10px;
+  background: #0095d9;
+  font-weight: 600;
+}
+
+.apply {
+  padding: 11px;
+}

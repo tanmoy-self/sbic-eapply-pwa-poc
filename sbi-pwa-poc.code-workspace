@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "claim-reporter-app"
+		},
+		{
+			"path": "claim-reporter-server"
+		}
+	]
+}

@@ -1,0 +1,57 @@
+.main-form {
+  width: 80% ;
+  margin: 0 auto;
+}
+
+.photo-preview-container {
+  width: 20%;
+  margin: 10px;
+}
+
+.photo-preview {
+  width: 100%;
+}
+
+@media screen and (max-width: 777px) {
+  .main-form {
+    width: 98%;
+  }
+
+  .main-container {
+    margin: 110px auto;
+  }
+}
+
+.notification-button-section {
+  margin-top: 10px;
+}
+
+.send-notification-button {
+  margin-top: 10px;
+}
+
+
+.card-container {
+  display: inline-block;
+  margin: 15px 30px 5px 30px;
+}
+
+.btn-custom {
+  border: none;
+  color: #fff;
+  background: #0095d9;
+  padding: 5px 10px;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+input, select {
+  border-radius: 0 !important;
+  background:#fbfbfb !important;
+  border: 1px solid #cdcbcb;
+  color: #666;
+}
+
+
+

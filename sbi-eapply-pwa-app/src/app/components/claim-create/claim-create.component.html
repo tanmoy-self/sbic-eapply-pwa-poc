@@ -1,0 +1,735 @@
+
+
+<div *ngIf="tabValue === 1" style="text-align: center;">
+  <div class="card-container" *ngFor="let i of [1,2,3,4,6,7,8,9]">
+    <img src="assets/card.png" style="width:200px;">
+    <p style="text-align: center;">SBI card prime</p>
+    <button class="btn-custom" (click)="tabValue = 2">Apply Now</button>
+  </div>
+</div>
+
+<div *ngIf="tabValue==2" class="ui card main-form" > 
+  <!-- <div style="display:inline-block;width:70%"> -->
+      <div class="content">
+          <div class="header" style="border-bottom: 1px solid #cdcbcb;font-weight: 500;font-size: 18px;margin-bottom: 10px;padding-bottom: 4px;">SBI Card E-Apply</div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                  <label style="font-weight: 600">Do you already have an SBI Credit Card?</label>
+                </div>
+                <div class="col-sm-6">
+                  <input type="radio" ><span style="font-weight: 600">Yes </span>
+                  <input type="radio"  checked><span style="font-weight: 600">No</span>
+                </div>
+            </div>
+            <div class=" row ">
+                <div class="col-sm-3 text right" >
+                    <label style="font-weight: 600" for="carModel" >Name</label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" id="carModel" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500" name="carModel" placeholder="First Name" [(ngModel)]="claim.carModel"  />
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" id="carNumber"  style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500"name="carNumber" placeholder="Middle Name" [(ngModel)]="claim.carNumber"  /><span style="color:#666;margin-bottom: 5px;font-weight: 500">(optional)</span>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" id="carNumber1" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500" name="carNumber" placeholder="Last Name" [(ngModel)]="claim.carNumber1"  />
+                </div>   
+            </div>
+            <div class="row">
+                <div class="col-sm-3 ">
+                    <label style="font-weight: 600">City</label>
+                </div>
+                <div class="col-sm-3">
+                    <select style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+                        <option>Pune</option>
+                        <option>Mumbai</option>
+                    </select>
+                </div>    
+            </div>
+            <div class="row">
+                <div class="col-sm-3 ">
+                    <label style="font-weight: 600">Occupation</label>
+                </div>
+                <div class="col-sm-3">
+                    <select style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+                        <option>Salaried</option>
+                        <option>Retired</option>
+                      </select>
+                </div>    
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label style="font-weight: 600">Date of Birth</label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" placeholder="DD/MM/YYYY" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+                </div>    
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label style="font-weight: 600">Qualification</label>
+                </div>
+                <div class="col-sm-3">
+                    <select style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+                      <option>Graduate</option>
+                      <option>Graduate and Above</option>
+                    </select>
+                </div>    
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                  <label style="font-weight: 600">Annual Income</label>
+                </div>
+                <div class="col-sm-3">
+                    <select style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+                      <option>Upto 8 lacs</option>
+                      <option>8 lacs and Above</option>
+                    </select>
+                </div>    
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label style="font-weight: 600">PAN</label>
+                    
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500" >
+                </div>    
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                  <label style="font-weight: 600">E-Mail</label>    
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+                </div>    
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                  <span style="color:#666;margin-bottom: 5px;font-weight: 500">Please enter the six-digit code that you have received in the SMS sent to the mobile number that you have provided.</span>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-3">
+                    <label style="font-weight: 600;">Mobile Number</label>    
+                </div>
+                <div class="col-sm-3">
+                    <input value="+91" type="text"  style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+                </div>
+                <div class="col-sm-3 text-center">
+                    <button style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500;border: none;background:#0095d9;color:white;">Verify Mobile Number</button>
+                </div>     
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                  <label style="font-weight: 600" >OTP</label>                      
+                </div>
+                <div class="col-sm-3">
+                  <input placeholder="Enter OTP" type="text"  style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500"> 
+                </div>    
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="checkbox">I have read <span style="color:#0095d9;">Customer Declaration</span> of SBI Card & understood all its terms and conditions.I confirm that details given above belong to me and authorize SBICPSL & its affiliates or associates to contactme on the details provided.   
+                </div>   
+            </div>
+            <div class="row">
+              <div class="col-sm-2 text-center">
+                <button  style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500;border: none;background: white;color:#0095d9;">Back</button>
+              </div>
+              <div class="col-sm-4 text-center">
+                <button style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500;border: none;background:#e0e0e0;color:#666;">Save For Later</button>
+              </div> 
+              <div class="col-sm-6 text-center">
+                  <button (click)="tabValue = 3" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500;border: none;background:#0095d9;color:white;">Next Step</button>
+              </div>   
+            </div>
+
+        </div>
+  <!-- </div>
+  <div style="display:inline-block;width:30%">
+  </div> -->
+      
+      
+        
+          <!--<div class="content">
+          <div class="ui large form equal width stackable grid">--> 
+            <!-- FIRST ROW -->
+             <!--<div class="one column row">
+              <div class="form-group column field" style="display: flex">
+                <label >Do you already have an SBI Credit Card?</label>
+                <input type="radio" style="margin: 1%;"><span style="margin: 0px 10px">Yes </span>
+                <input type="radio" style="margin: 1%;"><span style="margin: 0px 10px">No</span>
+              </div>
+            </div>
+            <div class="three column row">
+              <div class="form-group column field" style="display: flex">
+                <label for="carModel" style="width:50%; float:right;margin: 3%;" >Name</label>
+                <input type="text"     style="margin: 1%;"id="carModel" name="carModel" placeholder="First Name" [(ngModel)]="claim.carModel" (change)="cacheForm()" />
+                <input type="text"  style="margin: 1%;"id="carNumber" name="carNumber" placeholder="Middle Name" [(ngModel)]="claim.carNumber" (change)="cacheForm()" />
+                <input type="text"  style="margin: 1%;"id="carNumber1" name="carNumber" placeholder="Last Name" [(ngModel)]="claim.carNumber1" (change)="cacheForm()" />
+              </div>
+            </div> -->
+      
+      
+            <!-- SECOND ROW -->
+      
+      
+          <!--<div class="one column row">
+              <div class="form-group column field" style="display: flex">
+                <label style="width:50%; float:right;margin: 3%;">City</label>
+                <select style=" margin: 1%;">
+                  <option>Pune</option>
+                  <option>Mumbai</option>
+                </select>
+              </div>
+            </div>
+            <div class="one column row">
+              <div class="form-group column field" style="display: flex">
+                <label style="width:50%; float:right;margin: 3%;"> Occupation</label>
+                <select style="margin: 1%;">
+                  <option>Salaried</option>
+                  <option>Retired</option>
+                </select>
+              </div>
+            </div>
+            <div class="one column row">
+              <div class="form-group column field" style="display: flex">
+                <label style="width:50%; float:right;margin: 3%;">Date of Birth</label>
+                <input type="text" style="margin: 1%;"  placeholder="DD/MM/YYYY">
+              </div>
+            </div>
+            <div class="one column row">
+              <div class="form-group column field" style="display: flex">
+                <label style="width:50%; float:right;margin: 3%;">Qualification</label>
+                <select style="margin: 1%;">
+                  <option>Graduate</option>
+                  <option>Post Graduate and Above</option>
+                </select>
+              </div>
+            </div>
+            <div class="one column row">
+              <div class="form-group column field" style="display: flex">
+                <label style="width:50%; float:right;margin: 3%;">Annual Income</label>
+                <select style="margin: 1%;">
+                  <option>Upto 4 lacs</option>
+                  <option>8 lacs and Above</option>
+                </select>
+              </div>
+            </div>
+            <div class="one column row">
+              <div class="form-group column field" style="display: flex">
+                <label style="width:50%; float:righ;margin: 3%;">PAN</label>
+                <input type="text" style="margin: 1%;">
+              </div>
+            </div>
+            <div class="one column row">
+              <div class="form-group column field" style="display: flex">
+                <label style="width:50%; float:right;margin: 3%;">E-Mail</label>
+                <input type="text" style="margin: 1%;">
+              </div>
+            </div>
+            <div class="one column row">
+              <div class="form-group column field" style="display: flex">
+                <label style="width:50%; float:right;margin: 3%;">Mobile Number</label>
+                <input value="+91" type="text" style="max-width: 45%;margin: 1%;">
+                <button class="btn-custom" style="max-width: 20%;margin: 1%;">Verify Mobile Number</button>
+              </div>
+            </div>
+            <div class="one column row">
+              <div class="form-group column field" style="display: flex">
+                <label style="width:50%; float:right;margin: 3%;">OTP</label>
+                <input placeholder="Enter OTP" style="margin: 1%;" type="text">
+              </div>
+            </div>
+            <div class="one column row">
+              <div class="form-group column field" style="display: flex">
+                <input type="checkbox" style="margin: 1%;">I have read all the terms and conditions from SBI Card and by submitting this form I am agreeing to abide by them</div>
+            </div> -->
+            <!-- <div class="one column row">
+              <div class="form-group column field" style="display: flex">
+                <button class="btn-custom" style="
+                padding: 15px;
+                margin-right: 15px;
+                background: #aaa;color: #666;">Save For Later</button>
+                <button (click)="tabValue = 3" style="
+                padding: 15px;
+                margin-right: 15px;" class="btn-custom">Submit</button>
+              </div>
+            </div> -->
+          <!-- </div>
+        </div> -->
+</div>
+<div *ngIf="tabValue == 3" class="ui card main-form">
+  <div class="content">
+    <div class="header">Now fill in a few more details to get an Instant Decision.</div>
+  </div>
+  <div class="container">
+    <div class="content" >
+        <div class="header" style="border-bottom: 1px solid #cdcbcb;font-weight: 500;font-size: 18px;margin-bottom: 10px;padding-bottom: 4px;">Personal Details</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+          <label style="font-weight: 600">Gender</label>
+        </div>
+        <div class="col-sm-6">
+          <input type="radio"><span style="font-weight: 600">Male </span>
+          <input type="radio"><span style="font-weight: 600">Female</span>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <label style="font-weight: 600;width: 100%;">Residence Address</label>
+      </div>
+      <div class="col-sm-3">
+          <input type="text"style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+      </div>
+      <div class="col-sm-3">
+        <label style="font-weight: 600;width: 100%;">Residence Address conti.</label>
+      </div>
+      <div class="col-sm-3">
+          <input type="text" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500"><span style="color:#666;margin-bottom: 5px;font-weight: 500">(optional)</span>
+      </div>    
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <label style="font-weight: 600;width: 100%;">PIN Code</label>
+      </div>
+      <div class="col-sm-3">
+          <input type="text"style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+      </div>
+      <div class="col-sm-3">
+        <label style="font-weight: 600;width: 100%;">City</label>
+      </div>
+      <div class="col-sm-3">
+          <input type="text" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+      </div>    
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label style="font-weight: 600">Residence landline Number</label>    
+        </div>
+        <div class="col-sm-3">
+          <input type="text" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500"><span style="color:#666;margin-bottom: 5px;font-weight: 500">(optional)</span>
+        </div>
+    </div>
+    <div class="content" >
+        <div class="header" style="border-bottom: 1px solid #cdcbcb;font-weight: 500;font-size: 18px;margin-bottom: 10px;padding-bottom: 4px;">Professional Details</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <label style="font-weight: 600;width: 100%;">Company Name</label>
+      </div>
+      <div class="col-sm-3">
+          <input type="text"style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+      </div>
+      <div class="col-sm-3">
+        <label style="font-weight: 600;width: 100%;">Nature of Company</label>
+      </div>
+      <div class="col-sm-3">
+        <select style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+            <option>Private</option>
+            <option>Government</option>
+        </select>
+      </div>    
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <label style="font-weight: 600;width: 100%;">Office Address</label>
+      </div>
+      <div class="col-sm-3">
+          <input type="text"style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+      </div>
+      <div class="col-sm-3">
+        <label style="font-weight: 600;width: 100%;">Office Address conti.</label>
+      </div>
+      <div class="col-sm-3">
+          <input type="text" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500"><span style="color:#666;margin-bottom: 5px;font-weight: 500">(optional)</span>
+      </div>    
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <label style="font-weight: 600;width: 100%;">Designation</label>
+      </div>
+      <div class="col-sm-3">
+          <input type="text"style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+      </div>
+      <div class="col-sm-3">
+        <label style="font-weight: 600;width: 100%;">Years at Current employment</label>
+      </div>
+      <div class="col-sm-3">
+          <input type="text" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+      </div>    
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <label style="font-weight: 600;width: 100%;">Pincode</label>
+      </div>
+      <div class="col-sm-3">
+          <input type="text"style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+      </div>
+      <div class="col-sm-3">
+        <label style="font-weight: 600;width: 100%;">City</label>
+      </div>
+      <div class="col-sm-3">
+          <input type="text" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+      </div>    
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+          <label style="font-weight: 600">Office Landline Number</label>    
+      </div>
+      <div class="col-sm-3">
+        <input type="text" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500"><span style="color:#666;margin-bottom: 5px;font-weight: 500">(optional)</span>
+      </div>
+    </div>
+    <div class="content" >
+        <div class="header" style="border-bottom: 1px solid #cdcbcb;font-weight: 500;font-size: 18px;margin-bottom: 10px;padding-bottom: 4px;"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label style="font-weight: 600">Mailing address</label>    
+        </div>
+        <div class="col-sm-3">
+          <input type="radio"><span style="font-weight: 600">Office </span>
+          <input type="radio"><span style="font-weight: 600">Residence</span>          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+            <label style="font-weight: 600">Do you have any existing relationship with State Bank of India?</label>    
+        </div>
+        <div class="col-sm-3">
+            <input type="radio"><span style="font-weight: 600">Yes </span>
+            <input type="radio"><span style="font-weight: 600">No</span> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+            <label style="font-weight: 600">Alternate credit card number</label>    
+        </div>
+        <div class="col-sm-3">
+          <input type="text" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500"><span style="color:#666;margin-bottom: 5px;font-weight: 500">(optional)</span>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-12">
+              <input type="checkbox">I have read <span style="color:#0095d9;">Customer Declaration</span> of SBI Card and understood all its terms and conditions. I confirm that the details given above belong to me and authorize SBICPSL and its affiliates / associates and CPP* to contact me on the details provided to provide further information about the SBI Card and the card protection plan.
+              I also provide my consent to verify the information provided in the application form with the credit bureau. I agree to pay Rs. 4,999 as joining fee and Rs. 4,999 as annual fee associated with this card.   
+          </div>   
+      </div>
+      <div class="row">
+          <div class="col-sm-12">
+              *CPP Assistance Services Private Limited  
+          </div>   
+      </div>
+      <div class="row">
+          <div class="col-sm-12">
+              <input type="checkbox">I would like to subscribe to e-statements..   
+          </div>   
+      </div>
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <button  style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500;border: none;background: white;color:#0095d9;">Back</button>
+        </div>
+        <div class="col-sm-4 text-center">
+          <button style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500;border: none;background:#e0e0e0;color:#666;">Save For Later</button>
+        </div> 
+        <div class="col-sm-6 align-middle text-center">
+            <button (click)="tabValue = 4" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500;border: none;background:#0095d9;color:white;">Get Instant Decision</button>
+        </div>   
+      </div>
+  </div>
+  <!-- <div class="content">
+    <div class="ui large form equal width stackable grid"> -->
+      <!-- FIRST ROW -->
+      <!-- <div class="one column row">
+        <div class="form-group column field" style="display: flex">
+          <label >Gender</label>
+          <input type="radio" style="margin: 1%;"><span style="margin: 0px 10px;">Male</span>
+          <input type="radio" style="margin: 1%;"><span style="margin: 0px 10px;">Female</span></div>
+      </div>
+      <div class="two column row">
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">Residence Address</label>
+          <input type="text" style="margin: 1%;">
+        </div>
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">PIN Code</label>
+          <input type="text" style="margin: 1%;">
+        </div>
+      </div>
+      <div class="two column row">
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">Residence Address Continued</label>
+          <input type="text" style="margin: 1%;">
+        </div>
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">City</label>
+          <input type="text" style="margin: 1%;">
+        </div>
+      </div>
+      <div class="one column row">
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">Residence Landline Number</label>
+          <input type="text" style="margin: 1%;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="header">Professional Details</div>
+  </div>
+  <div class="content">
+    <div class="ui large form equal width stackable grid"> -->
+      <!-- FIRST ROW -->
+      <!-- <div class="two column row">
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">Company Name</label>
+          <input type="text" style="margin: 1%;">
+        </div>
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">Office Address</label>
+          <input type="text" style="margin: 1%;">
+        </div>
+      </div>
+      <div class="two column row">
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">Nature Of Company</label>
+          <select style="margin: 1%;">
+            <option>Private</option>
+            <option>Government</option>
+          </select>
+        </div>
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">Office Address Continued</label>
+          <input type="text" style="margin: 1%;">
+        </div>
+      </div>
+      <div class="two column row">
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">Designation</label>
+          <input type="text" style="margin: 1%;">
+        </div>
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">PIN Code</label>
+          <input type="text" style="margin: 1%;">
+        </div>
+      </div>
+      <div class="two column row">
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">Years at Current Employer</label>
+          <input type="text" style="margin: 1%;">
+        </div>
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">City</label>
+          <input type="text" style="margin: 1%;">
+        </div>
+      </div>
+      <div class="one column row">
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">Office Landline Number</label>
+          <input type="text" style="margin: 1%;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="ui large form equal width stackable grid"> -->
+      <!-- FIRST ROW -->
+      <!-- <div class="one column row">
+        <div class="form-group column field" style="display: flex">
+          <label >Mailing Address</label>
+          <input type="radio" style="margin: 1%;">
+            <span style="margin: 0px 10px">Office</span>
+            <input type="radio" style="margin: 1%;"><span style="margin: 0px 10px">Residence</span>
+        </div>
+      </div>
+      <div class="one column row">
+        <div class="form-group column field" style="display: flex">
+          <label >Do you have any existing relationship with State Bank Of India</label>
+          <input type="radio" style="margin: 1%;" ><span style="margin: 0px 10px">Yes</span><input type="radio" style="margin: 1%;"><span style="margin:0px 10px">No</span>
+        </div>
+      </div>
+      <div class="one column row">
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">Alternate Credit Card Number</label>
+          <input type="text" style="margin: 1%;">
+        </div>
+      </div>
+      <div class="two column row">
+        <div class="form-group column field" style="display: flex">
+          <button class="btn-custom" (click)="tabValue = 4">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
+<div *ngIf="tabValue == 4" class="ui card main-form">
+    <div class="container" style="padding: 15px;">
+      <div class="content">
+          <div class="header" style="border-bottom: 1px solid #cdcbcb;font-weight: 500;font-size: 18px;margin-bottom: 10px;padding-bottom: 4px;">Upload KYC Documents</div>
+      </div>
+      <div class="row">
+          <div class="col-sm-12">
+              <ul style="list-style-type:square;">
+                  <li style="color:#666;margin-bottom: 5px;font-weight: 500">Do ensure you SIGN on the copy of your documents before uploading.</li>
+                  <li style="color:#666;margin-bottom: 5px;font-weight: 500">Acceptable file formats are GIF, JPG (JPEG), TIF (TIFF), PNG and PDF and should not exceed 5 MB.</li>
+                  <li style="color:#666;margin-bottom: 5px;font-weight: 500">Do ensure to remove the additional security or password protection on the document before uploading.</li>
+              </ul> 
+          </div>   
+      </div>
+      <div class="content">
+          <div class="header" style="border-bottom: 1px solid #cdcbcb;font-weight: 500;font-size: 18px;margin-bottom: 10px;padding-bottom: 4px;"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+            <label style="font-weight: 600">ID Proof</label><br><span style="color:#666;margin-bottom: 5px;">(The name on the ID proof must match the applicant's)</span>    
+        </div>
+        <div class="col-sm-6">
+          <input type="file" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+            <label style="font-weight: 600">Address Proof</label><br><span style="color:#666;margin-bottom: 5px;">(The address in the proof document must match the address of the applicant)</span>    
+        </div>
+        <div class="col-sm-6">
+          <input type="file" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+        </div>
+      </div>
+      <div class="content">
+          <div class="header" style="border-bottom: 1px solid #cdcbcb;font-weight: 500;font-size: 18px;margin-bottom: 10px;padding-bottom: 4px;">Upload Income related Documents</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+            <label style="font-weight: 600">Document Type</label>  
+        </div>
+        <div class="col-sm-6">
+            <select style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+                <option>Pay Slip </option>
+                <option>Salary Slip</option>
+            </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+            <label style="font-weight: 600">Doc 1</label><br><span style="color:#666;margin-bottom: 5px;">(Upload latest 1st month's pay slip)</span> 
+        </div>
+        <div class="col-sm-6">
+          <input type="file" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+            <label style="font-weight: 600">Doc 2</label><br><span style="color:#666;margin-bottom: 5px;">(Upload latest 2nd month's pay slip)</span>      
+        </div>
+        <div class="col-sm-6">
+          <input type="file" style="width: 100%;margin-bottom: 5px;padding: 7px;font-weight: 500">
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-12">
+              <span style="color:#666;margin-bottom: 5px;font-weight: 500">We will contact you shortly to finalize your application and fix up an appointment to collect the documents that you have not uploaded.</span>      
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 text-center">
+            <button type="button" class="btn" (click)="tabValue=5"  style="background:#0095d9;color:white;">Submit</button>
+        </div>
+          
+      </div>
+
+
+    
+
+
+
+
+    </div>
+
+
+
+  <!-- <div class="content">
+    <div class="header">Upload KYC Documents</div>
+  </div>
+  <div class="content">
+    <div class="ui large form equal width stackable grid">
+      <div class="one column row">
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">ID Proof</label>
+          <input type="file" style="margin: 1%;">
+        </div>
+      </div>
+      <div class="one column row">
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">Address Proof</label>
+          <input type="file" style="margin: 1%;">
+        </div>
+      </div>
+    </div>  
+  </div>
+  <div class="content">
+    <div class="header">Upload Income Related Documents</div>
+  </div>
+  <div class="content">
+    <div class="ui large form equal width stackable grid">
+      <div class="one column row">
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">Document Type</label>
+          <select style="margin: 1%;">
+            <option>Pay Slip / Salary Slip</option>
+          </select>
+        </div>
+      </div>
+      <div class="one column row">
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">Pay Slip 1</label>
+          <input type="file" style="margin: 1%;">
+        </div>
+      </div>
+      
+      <div class="one column row">
+        <div class="form-group column field" style="display: flex">
+          <label style="width:50%; float:right;margin: 3%;">Pay Slip 2</label>
+          <input type="file" style="margin: 1%;">
+        </div>
+      </div>
+      <div class="one column row">
+        <div class="form-group column field" style="display: flex">
+          <p>We will contact you shortly to finalize your application and fix up your appointment to collect the documents you have not uploaded</p>
+        </div>
+      </div>
+      
+      <div class="one column row">
+        <div class="form-group column field" style="display: flex">
+          <button class="btn-custom" (click)="tabValue=5" value="Submit">Submit</button>
+        </div>
+      </div>
+    </div>  
+  </div> -->
+</div>
+<div *ngIf="tabValue == 5">
+  <div class="content">
+    <div class="ui large form equal width stackable grid">
+        <div style="text-align: center" class="one column row">
+          <span style="text-align: center; width: 100%;color:#666;font-weight: 500" >Thank you for uploading documents. Our representative will get in touch with you to finalise and process your SBI Card application.</span>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+   <!-- <div class="extra content">
+    <div class="row">
+      <button class="ui negative button" (click)="clearCache()">Clear cache</button>
+      <button class="ui positive right floated button" (click)="save()">Save claim</button>
+    </div>
+    <div class="row notification-button-section">
+      <button class="ui button" (click)="subscribeToNotifications()">Enable notifications</button>
+      <button class="ui button send-notification-button" (click)="sendNotificationToAll()">Send notification</button>
+    </div>
+  </div>  -->
